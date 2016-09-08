@@ -21,16 +21,35 @@ $(document).ready(function() {
    				$('.hadouken').css('left', '520px');
    			}
    		);
-   		//play hadouken sound
    })
    .mouseup(function() {
-   		$('.ryu-thowing').hide();
+   		$('.ryu-throwing').hide();
    		$('.ryu-ready').show();
    		
    });
 
 
-});
+    $(document).keydown(function() {
+        if (event.which == 88) {
+   	       // either image might be showing
+   	       $('.ryu-still').hide();
+   	       $('.ryu-ready').hide();
+   	     
+   	       $('.ryu-cool').show();
+   	    }
+ 
+     })
+        .keyup(function() {
+        if (event.which == 88) {
+   	       $('.ryu-cool').hide();
+   	       // always go back to still even if mouse is in area
+   	       $('.ryu-still').show();
+   	    }
+ 
+     });
+ });
+
+
 
 function playHadouken() {
 	$('#hadouken-sound')[0].volume = 0.5;
