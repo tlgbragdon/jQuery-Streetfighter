@@ -1,6 +1,7 @@
 
 body {
 	background-color: black;
+	font-family: 'Short Stack', cursive;
 }
 
 .main {
@@ -59,3 +60,23 @@ body {
 	left: 520px;
 	float: left;
 }	
+
+.instructions {
+	font-size: 30px;
+	color: red;
+	padding-top: 50px;
+	padding-right: 50px;
+}
+
+.instruct {
+	width: 25% 
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right
+	;
+}
